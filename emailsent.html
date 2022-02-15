@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-  <title>Create password</title>
+  <title>email sent</title>
 
   <style>
     :root {
@@ -34,6 +34,7 @@
       display: grid;
       grid-template-rows: auto 1fr auto;
       width: 300px;
+      justify-items: center;
     }
     .logo {
       width: 200px;
@@ -51,27 +52,20 @@
       font-size: var(--md);
       font-weight: 300;
       margin-top: 0;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       text-align: center;
     }
-    .form {
-      display: flex;
-      flex-direction: column;
+    .icon-email {
+        background-color: var(--text-input-field);
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
-    .label {
-      font-size: var(--sm);
-      font-weight: bold;
-      margin-bottom: 4px;
-    }
-    .input {
-      background-color: var(--text-input-field);
-      border: none;
-      border-radius: 8px;
-      height: 30px;
-      font-size: var(--md);
-      padding: 6px;
-      margin-bottom: 12px;
-    }
+   
     .primary-button {
       background-color: var(--hospital-green);
       border-radius: 8px;
@@ -83,9 +77,19 @@
       font-weight: bold;
       height: 50px;
     }
-    .login-button {
-      margin-top: 14px;
-      margin-bottom: 30px;
+   
+    .parrafo-2{
+        text-align: center;
+    }
+    .parrafo-2 span{
+        font-size: var(--sm);
+        color: var(--very-light-pink);
+    }
+    .parrafo-2 a {
+        color: var(--hospital-green);
+        font-weight: bold;
+        text-decoration: none;
+
     }
     @media (max-width: 640px) {
       .logo {
@@ -100,18 +104,19 @@
     <div class="login"> 
         <div class="form-container"> 
             <img class="logo" src="https://raw.githubusercontent.com/platzi/curso-frontend-developer-practico/4774124de4c723d46d6a22da4c93c03f7be9e7bd/logos/logo_yard_sale.svg" alt="logo">
-            <h1 class="title"> Create a new password </h1>
-            <p class="subtitle">Enter a new password for your account</p>
+            <h1 class="title"> Email has been sent!</h1>
+            <p class="subtitle">Please check your inbox for instructions on how to reset the password</p>
 
-            <form action="/" class="form">
-                <label for="password" class="label">Password</label>
-                <input type="password" id="password" placeholder="********" class="input input-password" >
+            <div class="icon-email">
+                <img src="https://raw.githubusercontent.com/platzi/curso-frontend-developer-practico/4774124de4c723d46d6a22da4c93c03f7be9e7bd/icons/email.svg" alt="icon-email">
+            </div>
 
-                <label for="password" class="label">Re-enter password</label>
-                <input type="password" id="new-password" placeholder="********" class="input input-password" >
+            <button class="primary-button" class="login-button">login</button>
 
-                <input type="submit" value="confirm" class="primary-button login-button">
-            </form>
+            <p class="parrafo-2"> 
+                <span>Didnt receive the email? </span>
+                <a href="/">Resend</a>
+            </p>
         </div>
     </div>
 
